@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.141.45;
+IP 158.160.141.45
 
 Frontend https://sergo.students.nomoredomainsmonster.ru;
 
