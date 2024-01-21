@@ -1,16 +1,16 @@
 [![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
 
 # react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
-  
-Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
+Проект место, но уже со стороны серверной разработки.
 
-Адрес репозитория: https://github.com/...
+Технологии и инструменты данного проекта следующие: Express, Postman, MongoDB, Mongoose, ESLint и body-parser, cookie, helmet, celebrate, bcryptjs, jsonwebtoken, валидация. Кроме того cдача этой проектной работы включает в себя прохождение тестов на базе Github Actions.
+
+Адрес репозитория: https://github.com/Qvanchik57/react-mesto-api-full-gha?tab=readme-ov-file
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.141.45;
 
-Frontend https://...
+Frontend https://sergo.students.nomoredomainsmonster.ru;
 
-Backend https://...
+Backend https://api.sergo.students.nomoredomainsmonster.ru;
