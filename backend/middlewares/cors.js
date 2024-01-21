@@ -6,6 +6,10 @@ const allowedCors = [
   'api.sergo.students.nomoredomainsmonster.ru',
   'http://sergo.students.nomoredomainsmonster.ru',
   'https://sergo.students.nomoredomainsmonster.ru',
+  'http://api.sergo.students.nomoredomainsmonster.ru',
+  'https://api.sergo.students.nomoredomainsmonster.ru',
+  'http://158.160.141.45',
+  'https://158.160.141.45',
 ];
 
 module.exports = (req, res, next) => {
