@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP 158.160.141.45
+IP 158.160.130.154
 
-Frontend https://sergo.students.nomoredomainsmonster.ru;
+Frontend https://sergey.nomoredomainsmonster.ru;
 
-Backend https://api.sergo.students.nomoredomainsmonster.ru;
+Backend https://api.sergey.nomoredomainsmonster.ru;
