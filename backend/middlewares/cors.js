@@ -2,14 +2,14 @@ const allowedCors = [
   'https://praktikum.tk',
   'http://praktikum.tk',
   'localhost:3000',
-  'sergo.students.nomoredomainsmonster.ru',
-  'api.sergo.students.nomoredomainsmonster.ru',
-  'http://sergo.students.nomoredomainsmonster.ru',
-  'https://sergo.students.nomoredomainsmonster.ru',
-  'http://api.sergo.students.nomoredomainsmonster.ru',
-  'https://api.sergo.students.nomoredomainsmonster.ru',
-  'http://158.160.141.45',
-  'https://158.160.141.45',
+  'sergey.nomoredomainsmonster.ru',
+  'api.sergey.nomoredomainsmonster.ru',
+  'http://sergey.nomoredomainsmonster.ru',
+  'https://sergey.nomoredomainsmonster.ru',
+  'http://api.sergey.nomoredomainsmonster.ru',
+  'https://api.sergey.nomoredomainsmonster.ru',
+  'http://158.160.130.154',
+  'https://158.160.130.154',
 ];
 
 module.exports = (req, res, next) => {
