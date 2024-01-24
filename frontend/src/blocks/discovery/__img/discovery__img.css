@@ -1,0 +1,7 @@
+.discovery__img {
+    margin: 0;
+    max-width: 75vw;
+    max-height: calc(75vh - 22px);
+    border-style: none;
+    object-fit: contain;
+}

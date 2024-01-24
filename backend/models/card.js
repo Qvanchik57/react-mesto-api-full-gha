@@ -19,12 +19,12 @@ const cardSchema = new mongoose.Schema({
     default: '658b24951c0f36e7c0b824bc',
   },
   // список лайкнувших пост пользователей
-  likes: [{
-    type: mongoose.Schema.Types.ObjectId,
+  likes: {
+    type: [mongoose.Schema.Types.ObjectId],
     ref: 'user',
     required: [true, 'Поле "likes" должно быть заполнено'],
     default: [],
-  }],
+  },
   createAt: {
     type: Date,
     default: Date.now(),

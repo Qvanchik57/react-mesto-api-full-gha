@@ -1,0 +1,22 @@
+.signin__link {
+  margin: 0;
+  width: 358px;
+  height: 17px;
+  top: 623px;
+  left: 461px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  transition: opacity .2s;
+}
+
+.signin__link:hover {
+  opacity: .8;
+}

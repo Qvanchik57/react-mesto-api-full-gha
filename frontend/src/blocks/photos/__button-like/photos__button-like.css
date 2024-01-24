@@ -1,0 +1,16 @@
+.photos__button-like {
+  background: url(../../../images/button-like.png);
+  padding: 0;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  background-size: contain;
+  height: 19px;
+  width: 22px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.photos__button-like:hover {
+  opacity: 0.5;
+}

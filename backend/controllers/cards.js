@@ -8,7 +8,7 @@ const CREATE_REQ = 201;
 
 module.exports.getCards = async (req, res, next) => {
   await Cards.find({})
-    .then((cards) => res.status(GOOD_REQ).send({ data: cards }))
+    .then((cards) => res.status(GOOD_REQ).send(cards))
     .catch(next);
 };
 
@@ -20,7 +20,7 @@ module.exports.createCard = async (req, res, next) => {
   const owner = req.user._id;
 
   await Cards.create({ name, link, owner })
-    .then((card) => res.status(CREATE_REQ).send({ data: card }))
+    .then((card) => res.status(CREATE_REQ).send(card))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new ValidationError('Переданы некорректные данные при создании карточки'));
@@ -61,7 +61,7 @@ module.exports.likeCard = async (req, res, next) => {
       if (!card) {
         throw new NotFoundError('Передан несуществующий _id карточки');
       }
-      res.status(GOOD_REQ).send({ data: card });
+      res.status(GOOD_REQ).send(card);
     })
     .catch((err) => {
       if (err.name === 'CastError') {
@@ -82,7 +82,7 @@ module.exports.dislikeCard = async (req, res, next) => {
       if (!card) {
         throw new NotFoundError('Передан несуществующий _id карточки');
       }
-      next(res.send({ data: card }));
+      next(res.send(card));
     })
     .catch((err) => {
       if (err.name === 'CastError') {

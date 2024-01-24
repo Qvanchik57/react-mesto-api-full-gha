@@ -9,7 +9,7 @@ Full project mesto.
 
 ## Ссылки на проект
 
-IP 158.160.130.154
+IP 158.160.111.217
 
 Frontend https://sergey.nomoredomainsmonster.ru;
 

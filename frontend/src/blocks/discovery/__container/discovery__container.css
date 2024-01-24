@@ -1,0 +1,9 @@
+.discovery__container {
+    margin: 0;
+    max-width: 75vw;
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
