@@ -27,10 +27,10 @@ function Login({handleLogin, ...props}) {
         }
         auth.authorize(formValue.password, formValue.email)
             .then((data) => {
-                console.log(data)
                 if (data.token) {
                     setFormValue({email: '', password: ''});
                     handleLogin();
+                    props.checkData();
                     navigate('/', {replace: true});
                 }
             })
