@@ -31,7 +31,6 @@ function App(props) {
   const [loggedIn, setLoggedIn] = React.useState(true);
   const [headerLink, setHeaderLink] = React.useState('Регистрация');
   const [headerSign, setHeaderSign] = React.useState('');
-  const [headerEmail, setHeaderEmail] = React.useState('');
   const [infoHeader, setInfoHeader] = React.useState('');
   const [infoImg, setInfoImg] = React.useState('');
 
@@ -63,17 +62,36 @@ function App(props) {
 
       api.getCards()
         .then((data) => {
+          console.log(data);
           setCards(data);
         })
         .catch((err) => {
           console.log(err);
         })
     }
-  }, [loggedIn])
+  }, [])
 
   React.useEffect(() => {
     handleTokenCheck()
   }, [])
+
+  function checkData () {
+      api.getStartDataUser()
+        .then((user) => {
+          setCurrentUser(user);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+
+      api.getCards()
+        .then((data) => {
+          setCards(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+  }
 
   function handleTokenCheck () {
     if (localStorage.getItem('jwt')){
@@ -201,12 +219,12 @@ function App(props) {
     <div className={props.class}>
       <CurrentUserContext.Provider value={currentUser} >
         <BrowserRouter>
-          <Header class="header" loggedIn={loggedIn} headerLink={headerLink} headerSign={headerSign} handleLoginOut={handleLoginOut} headerEmail={headerEmail} />
+          <Header class="header" loggedIn={loggedIn} headerLink={headerLink} headerSign={headerSign} handleLoginOut={handleLoginOut} />
           <Routes>
             <Route path="/" element={loggedIn ? <Navigate to="/main" replace /> : <Navigate to="/signin" replace />} />
             <Route path='/main' element={<ProtectedRouteElement element={Main} class="content" onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick} cards={cards} onCardLike={handleCardLike} onCardDelete={handleDeleteClick} handleHeaderLink={handleHeaderLink} handleHeaderSign={handleHeaderSign} loggedIn={loggedIn} />}/>
             <Route path='/signup' element={<Register class={"sign"} onClose={closeAllPopups} handleHeaderLink={handleHeaderLink} handleHeaderSign={handleHeaderSign} isOpen={handleAuthCheck} />}/>
-            <Route path='/signin' element={<Login handleLogin={handleLogin} class={"sign"} onClose={closeAllPopups} handleHeaderLink={handleHeaderLink} handleHeaderSign={handleHeaderSign} isOpen={handleAuthCheck} />}/>
+            <Route path='/signin' element={<Login handleLogin={handleLogin} class={"sign"} onClose={closeAllPopups} handleHeaderLink={handleHeaderLink} handleHeaderSign={handleHeaderSign} isOpen={handleAuthCheck} checkData={checkData} />}/>
           </Routes>
         </BrowserRouter>
 
