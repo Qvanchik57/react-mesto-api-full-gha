@@ -7,7 +7,7 @@ import userEvent from '@testing-library/user-event';
 function Header(props) {
     const sign = `${props.headerSign}`;
     const user = React.useContext(CurrentUserContext);
-    
+
     function handleOutClick() {
       localStorage.removeItem('jwt');
       props.handleLoginOut();
