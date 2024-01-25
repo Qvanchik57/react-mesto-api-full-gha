@@ -82,7 +82,6 @@ function App(props) {
         .then((res) => {
           if (res) {
             setLoggedIn(true);
-            setHeaderEmail(res.data.email);
           }
         })
         .catch(err => console.log(err))
@@ -202,7 +201,7 @@ function App(props) {
     <div className={props.class}>
       <CurrentUserContext.Provider value={currentUser} >
         <BrowserRouter>
-          <Header class="header" loggedIn={loggedIn} headerLink={headerLink} headerSign={headerSign} handleLoginOut={handleLoginOut} headerEmail={headerEmail}/>
+          <Header class="header" loggedIn={loggedIn} headerLink={headerLink} headerSign={headerSign} handleLoginOut={handleLoginOut} headerEmail={headerEmail} />
           <Routes>
             <Route path="/" element={loggedIn ? <Navigate to="/main" replace /> : <Navigate to="/signin" replace />} />
             <Route path='/main' element={<ProtectedRouteElement element={Main} class="content" onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick} cards={cards} onCardLike={handleCardLike} onCardDelete={handleDeleteClick} handleHeaderLink={handleHeaderLink} handleHeaderSign={handleHeaderSign} loggedIn={loggedIn} />}/>
